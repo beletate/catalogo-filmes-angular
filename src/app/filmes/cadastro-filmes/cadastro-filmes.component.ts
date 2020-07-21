@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ValidarCamposService } from 'src/app/shared/components/campos/validar-campos.service';
+import { Router } from '@angular/router';
 import { Filme } from 'src/app/shared/models/filme';
 import { FilmesService } from 'src/app/core/filmes.service';
+import { MatDialog } from '@angular/material/dialog';
+import { AlertaComponent } from 'src/app/shared/components/alerta/alerta.component';
+import { Alerta } from 'src/app/shared/models/alerta';
 
 @Component({
   selector: 'dio-cadastro-filmes',
@@ -15,9 +19,11 @@ export class CadastroFilmesComponent implements OnInit {
   generos: Array<String>;
 
   constructor(
+    public dialog: MatDialog,
     public validacao: ValidarCamposService,
     private fb: FormBuilder,
-    private filmeService: FilmesService
+    private filmeService: FilmesService,
+    private router: Router
     ) { }
 
     get f(){
@@ -74,10 +80,34 @@ export class CadastroFilmesComponent implements OnInit {
 
   private salvar(filme: Filme): void{
     this.filmeService.salvar(filme).subscribe(() => {
-      alert('SUCESSO!');
+      const config = {
+        data:{
+          btnSucesso: 'Ir para a listagem',
+          btnCancelar: 'Cadastrar um novo filme',
+          corBtnCancelar: 'primary',
+          possuirBtnFechar: true,
+        } as Alerta
+      };
+
+      const dialogRef = this.dialog.open(AlertaComponent, config);
+      dialogRef.afterClosed().subscribe((opcao: boolean) => {
+        if (opcao){
+          this.router.navigateByUrl('filmes');
+        } else{
+          this.reiniciarForm();
+        }
+      });
     },
     () => {
-      alert('ERRO AO SALVAR!');
+      const config = {
+        data:{
+          titulo: 'Erro ao salvar o registro!',
+          descricao: 'Não foi possível salvar o registro do filme. \nTente novamente mais tarde.',
+          corBtnSucesso: 'warn',
+          btnSucesso: 'Fechar',
+        } as Alerta
+      };
+      this.dialog.open(AlertaComponent, config);
     });
   }
 }

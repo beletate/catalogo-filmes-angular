@@ -119,6 +119,76 @@
       "urlIMDb": "aaaaaaaaaaaaaaaaaaaaaaa",
       "genero": "Terrro",
       "id": 12
+    },
+    {
+      "titulo": "aa",
+      "urlFoto": "",
+      "dtLancamento": "2020-07-22T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Ficção Cientifíca",
+      "id": 13
+    },
+    {
+      "titulo": "aa",
+      "urlFoto": "",
+      "dtLancamento": "2020-07-06T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Comédia",
+      "id": 14
+    },
+    {
+      "titulo": "aa",
+      "urlFoto": "",
+      "dtLancamento": "2020-07-14T03:00:00.000Z",
+      "descricao": null,
+      "nota": 2,
+      "urlIMDb": null,
+      "genero": "Ficção Cientifíca",
+      "id": 15
+    },
+    {
+      "titulo": "aa",
+      "urlFoto": "",
+      "dtLancamento": "2020-07-21T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Ficção Cientifíca",
+      "id": 16
+    },
+    {
+      "titulo": "aa",
+      "urlFoto": "",
+      "dtLancamento": "2020-07-21T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Ficção Cientifíca",
+      "id": 17
+    },
+    {
+      "titulo": "aa",
+      "urlFoto": "",
+      "dtLancamento": "2020-07-21T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Ficção Cientifíca",
+      "id": 18
+    },
+    {
+      "titulo": "aa",
+      "urlFoto": "",
+      "dtLancamento": "2020-07-20T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Ficção Cientifíca",
+      "id": 19
     }
   ]
 }
