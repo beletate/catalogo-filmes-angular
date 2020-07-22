@@ -59,7 +59,7 @@ export class CadastroFilmesComponent implements OnInit {
 
     });
 
-    this.generos = ['Ação', 'Romance','Aventura', 'Terrro', 'Ficção Cientifíca', 'Comédia', 'Aventura', 'Drama'];
+    this.generos = ['Ação', 'Romance','Aventura', 'Terror', 'Ficção Cientifíca', 'Comédia', 'Aventura', 'Drama'];
 
   }
 
