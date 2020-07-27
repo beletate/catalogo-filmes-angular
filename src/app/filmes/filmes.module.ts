@@ -8,6 +8,7 @@ import { MaterialModule } from '../shared/material/material.module';
 import { CadastroFilmesComponent } from './cadastro-filmes/cadastro-filmes.component';
 import { CamposModule } from '../shared/components/campos/campos.module';
 import { ListagemFilmesComponent } from './listagem-filmes/listagem-filmes.component';
+import { VisualizarFilmesComponent } from './visualizar-filmes/visualizar-filmes.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { ListagemFilmesComponent } from './listagem-filmes/listagem-filmes.compo
   ],
   declarations: [
     CadastroFilmesComponent, 
-    ListagemFilmesComponent
+    ListagemFilmesComponent,
+    VisualizarFilmesComponent
   ]
 })
 export class FilmesModule { }
